@@ -3,7 +3,6 @@ import React from "react";
 import Layout from "../../components/Layout";
 
 const Project = ({ project }: any) => {
-  console.log(project);
   return (
     <Layout title="Portfolio">
       <div style={{ display: "flex" }}>
