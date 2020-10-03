@@ -1,11 +1,28 @@
-import fs from "fs";
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 
-const Index = () => {
+interface IndexProps {
+  MutableRefObject: null;
+}
+
+const Index: React.FC<IndexProps> = () => {
+  useEffect(() => {
+    // let children = document.getElementById("home-content")?.childNodes;
+    // TweenMax.staggerFrom(
+    //   children,
+    //   1,
+    //   {
+    //     opacity: 0,
+    //     x: 2000,
+    //     ease: Power3.easeOut,
+    //   },
+    //   0.2
+    // );
+  }, []);
+
   return (
     <Layout title="Home">
-      <div className="home-page">
+      <div id="home-content" className="home-page">
         <h4 className="home-string">Hello, my name is</h4>
         <h1 id="owner-name" className="home-name">
           Tyler Harper
@@ -17,31 +34,8 @@ const Index = () => {
           I love building things for the web
         </p>
       </div>
-
-      {/* <div>
-        slugs:
-        {slugs.map((slug: string | number | null | undefined) => {
-          return (
-            <div key={slug}>
-              <Link href={`/blog/${slug}`}>
-                <a>{`/blog/${slug}`}</a>
-              </Link>
-            </div>
-          );
-        })}
-      </div> */}
     </Layout>
   );
-};
-
-export const getStaticProps = async () => {
-  const files = fs.readdirSync("posts");
-
-  return {
-    props: {
-      slugs: files.map((filename) => filename.replace(".md", "")),
-    },
-  };
 };
 
 export default Index;

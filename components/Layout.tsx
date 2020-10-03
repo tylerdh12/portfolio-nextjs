@@ -1,7 +1,6 @@
 import {
   faGithub,
-  faLinkedin,
-  faTwitter,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
@@ -139,9 +138,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
             </li>
             <li>
               <div className="social-icons">
-                <a target="_blank" href="https://twitter.com/jsstackdev">
-                  <FontAwesomeIcon icon={faTwitter} className="faTwitter fa" />
-                </a>
                 <a target="_blank" href="https://github.com/tylerdh12">
                   <FontAwesomeIcon icon={faGithub} className="faGithub fa" />
                 </a>

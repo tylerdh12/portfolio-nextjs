@@ -1,37 +1,29 @@
+import Link from "next/link";
 import React from "react";
 
 interface ProjectCardProps {
-  project_name: string;
-  img: string;
-  github: string;
-  live: string;
-  key: any;
+  key: number;
+  project: {
+    id: number;
+    group: string;
+    project_name: string;
+    description: string;
+    technologies: [string];
+    live_link: string;
+    github_link: string;
+    image_urls: [string];
+    status: string;
+  };
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
-  project_name,
-  img,
-  github,
-  live,
-  key,
-}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div key={key} className="item-container">
-      <img src={img} alt={project_name} />
-      <div className="item-label">{project_name}</div>
-      <div className="button-container">
-        <button className="link-button">
-          <a target="_blank" href={live}>
-            Live
-          </a>
-        </button>
-        <button className="hub-button">
-          <a target="_blank" href={github}>
-            GitHub
-          </a>
-        </button>
+    <Link href={{ pathname: "/portfolio/[id]", query: { id: project.id } }}>
+      <div className="item-container">
+        <img src={project.image_urls[0]} alt={project.project_name} />
+        <div className="item-label">{project.project_name}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 

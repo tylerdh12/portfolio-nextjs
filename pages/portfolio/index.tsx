@@ -2,14 +2,10 @@ import React from "react";
 import ProjectCard from "../../components/Elements/ProjectCard";
 import Layout from "../../components/Layout";
 
-// interface PortfolioProps {
-//   data: any;
-//   getInitialProps: () => object;
-// }
+
 
 export const Portfolio = ({ data }: any) => {
   const projects = data.projects;
-  console.log(projects);
   return (
     <Layout title="Portfolio">
       <div id="portfolio-section">
@@ -19,26 +15,19 @@ export const Portfolio = ({ data }: any) => {
             <div className="portfolio-label">Personal Projects</div>
             <div className="personal-projects">
               {projects.map(
-                (
-                  project: {
-                    project_name: string;
-                    image_urls: string[];
-                    live_link: string;
-                    github_link: string;
-                    group: string;
-                  },
-                  index: any
-                ) => {
+                (project: {
+                  id: number;
+                  group: string;
+                  project_name: string;
+                  description: string;
+                  technologies: [string];
+                  live_link: string;
+                  github_link: string;
+                  image_urls: [string];
+                  status: string;
+                }) => {
                   if (project.group === "Personal")
-                    return (
-                      <ProjectCard
-                        key={index}
-                        project_name={project.project_name}
-                        img={project.image_urls[0]}
-                        live={project.live_link}
-                        github={project.github_link}
-                      />
-                    );
+                    return <ProjectCard key={project.id} project={project} />;
                 }
               )}
             </div>
@@ -47,26 +36,19 @@ export const Portfolio = ({ data }: any) => {
             <div className="portfolio-label">School Projects</div>
             <div className="personal-projects">
               {projects.map(
-                (
-                  project: {
-                    project_name: string;
-                    image_urls: string[];
-                    live_link: string;
-                    github_link: string;
-                    group: string;
-                  },
-                  index: any
-                ) => {
+                (project: {
+                  id: number;
+                  group: string;
+                  project_name: string;
+                  description: string;
+                  technologies: [string];
+                  live_link: string;
+                  github_link: string;
+                  image_urls: [string];
+                  status: string;
+                }) => {
                   if (project.group === "School")
-                    return (
-                      <ProjectCard
-                        key={index}
-                        project_name={project.project_name}
-                        img={project.image_urls[0]}
-                        live={project.live_link}
-                        github={project.github_link}
-                      />
-                    );
+                    return <ProjectCard key={project.id} project={project} />;
                 }
               )}
             </div>
