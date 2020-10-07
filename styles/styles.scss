@@ -399,12 +399,27 @@ form p button:hover {
 
 // Portfolio item page
 
+.project-name {
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.project-description {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .button-container {
   display: flex;
   flex-direction: row;
   padding: 1rem;
   justify-content: space-around;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .link-button {
@@ -422,6 +437,29 @@ form p button:hover {
     background-color: white;
     color: #272727;
   }
+}
+
+.technology-title {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.technology-ul {
+  text-align: center;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-basis: 10px;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.technology-item {
+  padding: 0.5rem;
+}
+
+.portfolio-img-container {
+  text-align: center;
 }
 
 .portfolio-img {
