@@ -396,3 +396,28 @@ form p button:hover {
     padding: 0.5rem;
   }
 }
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.link-button {
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.75rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 40%;
+  text-decoration: none;
+
+  &:hover {
+    background-color: white;
+    color: #272727;
+  }
+}

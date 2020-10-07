@@ -1,3 +1,4 @@
+import Link from "next/link";
 import fetch from "node-fetch";
 import React from "react";
 import Layout from "../../components/Layout";
@@ -22,6 +23,18 @@ const Project = ({ project }: any) => {
         >
           {project.description}
         </p>
+        <div className="button-container">
+          <Link href={project.github_link} passHref>
+            <a target="_blank" className="link-button">
+              Code
+            </a>
+          </Link>
+          <Link href={project.live_link} passHref>
+            <a target="_blank" className="link-button">
+              Live
+            </a>
+          </Link>
+        </div>
         <h3 style={{ textAlign: "center" }}>Technologies</h3>
         <ul
           style={{
@@ -35,7 +48,7 @@ const Project = ({ project }: any) => {
           }}
         >
           {project.technologies.map((item: React.ReactNode) => {
-            return <li>{item}</li>;
+            return <li style={{ padding: 0.8 }}>{item}</li>;
           })}
         </ul>
         <div style={{ textAlign: "center" }}>
