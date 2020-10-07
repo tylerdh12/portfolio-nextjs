@@ -397,6 +397,8 @@ form p button:hover {
   }
 }
 
+// Portfolio item page
+
 .button-container {
   display: flex;
   flex-direction: row;
@@ -420,4 +422,10 @@ form p button:hover {
     background-color: white;
     color: #272727;
   }
+}
+
+.portfolio-img {
+  width: 90%;
+  margin: 1rem;
+  max-width: 450px;
 }

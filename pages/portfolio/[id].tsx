@@ -54,7 +54,10 @@ const Project = ({ project }: any) => {
         <div style={{ textAlign: "center" }}>
           {project.image_urls.map((item: any) => {
             return (
-              <img src={item} style={{ width: "90%", marginBottom: 40 }} />
+              <img
+                src={item}
+                className="portfolio-img"
+              />
             );
           })}
         </div>
