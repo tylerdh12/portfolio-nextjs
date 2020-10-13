@@ -160,6 +160,7 @@ portfolio-section {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  padding: 0;
 }
 
 .school-projects {
@@ -191,7 +192,7 @@ portfolio-section {
 }
 
 .item-label {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 600;
@@ -466,4 +467,8 @@ form p button:hover {
   width: 90%;
   margin: 1rem;
   max-width: 450px;
+}
+
+.card {
+  list-style: none;
 }

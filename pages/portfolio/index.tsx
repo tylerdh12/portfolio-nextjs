@@ -13,7 +13,7 @@ export const Portfolio = ({ data }: any) => {
           <h2>Portfolio</h2>
           <div id="portfolio" className="portfolio-container">
             <div className="portfolio-label">Personal Projects</div>
-            <div className="personal-projects">
+              <ul className="personal-projects">
               {projects.map(
                 (project: {
                   id: number;
@@ -30,11 +30,11 @@ export const Portfolio = ({ data }: any) => {
                     return <ProjectCard key={project.id} project={project} />;
                 }
               )}
-            </div>
+              </ul>
           </div>
           <div id="portfolio" className="portfolio-container">
             <div className="portfolio-label">School Projects</div>
-            <div className="personal-projects">
+            <ul className="personal-projects">
               {projects.map(
                 (project: {
                   id: number;
@@ -51,7 +51,7 @@ export const Portfolio = ({ data }: any) => {
                     return <ProjectCard key={project.id} project={project} />;
                 }
               )}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
