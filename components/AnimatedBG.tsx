@@ -4,21 +4,22 @@ import React from 'react';
 
 const AnimatedBG = () => {
 
-
-        const initialRandomHorizontalLocation = Math.floor(Math.random() * 500);
-        const randomHorizontalLocation = Math.floor(Math.random() * 500);
+        const initialRandomVerticalLocation = '-100vh';
+        const randomVerticalLocation = '100vh';
+        const initialRandomHorizontalLocation = Math.floor(Math.random() * 1000) * 2;
+        const randomHorizontalLocation = Math.floor(Math.random() * 1000) * 2;
         const duration = Math.floor(Math.random() * 15);
         const delay = Math.random();
         const rotation = Math.floor(Math.random() * 360);
 
 
 
-    const createSquare = (initialRandomHorizontalLocation: number, randomHorizontalLocation: number, duration: number, delay: number, rotation: number) => {
+    const createSquare = (initialRandomVerticalLocation: string , randomVerticalLocation: string ,initialRandomHorizontalLocation: number, randomHorizontalLocation: number, duration: number, delay: number, rotation: number) => {
         console.log(initialRandomHorizontalLocation, randomHorizontalLocation, duration, delay)
-        return <motion.div initial={{y: '100vh', x: initialRandomHorizontalLocation}}  animate={{y: '-100vh', x: randomHorizontalLocation, rotate: rotation}} transition={{duration: duration, delay: delay}} style={{height: 100, width: 100, borderColor: "grey", borderWidth: 3, borderStyle: "solid", opacity: .2}}></motion.div>
+        return <motion.div initial={{y: initialRandomVerticalLocation, x: initialRandomHorizontalLocation}}  animate={{y: randomVerticalLocation, x: randomHorizontalLocation, rotate: rotation}} transition={{duration: duration, delay: delay, yoyo: 10}} style={{height: 100, width: 100, borderColor: "grey", borderWidth: 3, borderStyle: "solid", opacity: .2}}/>
     }
 
-    return createSquare(initialRandomHorizontalLocation, randomHorizontalLocation, duration, delay, rotation)
+    return createSquare(initialRandomVerticalLocation, randomVerticalLocation, initialRandomHorizontalLocation, randomHorizontalLocation, duration, delay, rotation)
 }
 
 export default AnimatedBG;

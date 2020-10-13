@@ -5,7 +5,7 @@ const About: React.FunctionComponent = () => {
   return (
     <Layout title="About">
       <div className="full-view">
-        <div>
+        <div className="max-container">
           <h1>About Me</h1>
           <p id="about-me" className="about-me">
             Thank you for taking a look at my portfolio. I have been working in

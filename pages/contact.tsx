@@ -7,9 +7,9 @@ const Contact: React.FC<ContactProps> = ({}) => {
   return (
     <Layout title="Contact">
       <div id="contact" className="full-view">
-        <div>
-          <h2>Contact</h2>
+        <div className="max-container">
           <div className="form-container">
+          <h2>Contact</h2>
             <form name="contact" method="POST" data-netlify="true">
               <p>
                 <label>

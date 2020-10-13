@@ -96,7 +96,7 @@ nav ul li a {
   flex-direction: column;
   min-height: 95vh;
   justify-content: center;
-  padding-left: 3rem;
+  margin-left: 12rem;
 }
 
 .home-string {
@@ -396,6 +396,10 @@ form p button:hover {
     font-size: 2rem;
     padding: 0.5rem;
   }
+
+  .home-page {
+    margin-left: 2rem;
+  }
 }
 
 // Portfolio item page
@@ -479,4 +483,8 @@ form p button:hover {
   width: 200px;
   height: 200px;
   border: 3px solid #ffffff;
+}
+
+.max-container {
+  max-width: 900px;
 }

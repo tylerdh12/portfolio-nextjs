@@ -10,7 +10,6 @@ export const Portfolio = ({ data }: any) => {
     <Layout title="Portfolio">
       <div id="portfolio-section">
         <div>
-          <h2>Portfolio</h2>
           <div id="portfolio" className="portfolio-container">
             <div className="portfolio-label">Personal Projects</div>
               <ul className="personal-projects">

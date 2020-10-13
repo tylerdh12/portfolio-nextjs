@@ -9,25 +9,24 @@ interface IndexProps {
 
 const Index: React.FC<IndexProps> = () => {
 
+  const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: .5,
+      duration: .75
+    }
+  }
+}
+
+const item = {
+  hidden: { opacity: 0, x: '100vw' },
+  show: { opacity: 1, x: 0}
+}
+
   return (
     <Layout title="Home">
-      <motion.div id="home-content" className="home-page">
-        <motion.h4 
-        initial={{x: '100vw', y: `100vh`}}  
-        animate={{x: 0, y: 0}} 
-        transition={{duration: .4, delay: .4}} 
-        className="home-string">Hello, my name is</motion.h4>
-        <motion.h1 initial={{x: '100vw', y: `100vh`}}  animate={{x: 0, y: 0}} transition={{duration: .4, delay: .45}} id="owner-name" className="home-name">
-          Tyler Harper
-        </motion.h1>
-        <motion.h2 initial={{x: '100vw', y: `100vh`}} animate={{x: 0, y: 0}} transition={{duration: .4, delay: .5}} id="owner-label" className="home-label">
-          Full Stack Web / Native Developer
-        </motion.h2>
-        <motion.p initial={{x: '100vw', y: `100vh`}}  animate={{x: 0, y: 0}} transition={{duration: .4, delay: .55}} id="owner-tagline" className="home-tagline">
-          I love building things for the web
-        </motion.p>
-      </motion.div>
-      <div style={{position: "absolute"}}>
+      <div style={{position: "absolute", height: "100vh", width: '100vw', overflow: 'hidden'}}>
         <AnimatedBG />
         <AnimatedBG />
         <AnimatedBG />
@@ -46,7 +45,23 @@ const Index: React.FC<IndexProps> = () => {
         <AnimatedBG />
         <AnimatedBG />
       </div>
-        
+      <motion.div
+      variants={container}
+    initial="hidden"
+    animate="show"
+   id="home-content" className="home-page">
+        <motion.h4 variants={item}
+        className="home-string">Hello, my name is</motion.h4>
+        <motion.h1 variants={item} id="owner-name" className="home-name">
+          Tyler Harper
+        </motion.h1>
+        <motion.h2 variants={item} id="owner-label" className="home-label">
+          Full Stack Web / Native Developer
+        </motion.h2>
+        <motion.p variants={item} id="owner-tagline" className="home-tagline">
+          I love building things for the web
+        </motion.p>
+      </motion.div>    
     </Layout>
   );
 };

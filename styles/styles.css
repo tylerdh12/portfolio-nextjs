@@ -133,7 +133,7 @@ nav ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 3rem;
+  margin-left: 12rem;
 }
 
 .home-string {
@@ -511,6 +511,9 @@ form p button:hover {
     font-size: 2rem;
     padding: 0.5rem;
   }
+  .home-page {
+    margin-left: 2rem;
+  }
 }
 
 .project-name {
@@ -602,5 +605,9 @@ form p button:hover {
   width: 200px;
   height: 200px;
   border: 3px solid #ffffff;
+}
+
+.max-container {
+  max-width: 900px;
 }
 /*# sourceMappingURL=styles.css.map */
