@@ -5,8 +5,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
-import * as React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Footer } from "./Elements/Footer";
 
 type LayoutProps = {
@@ -15,6 +14,12 @@ type LayoutProps = {
 
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
   const [menuVisible, setMenuVisible] = useState(true);
+
+  useEffect(() => {
+    menuVisible === true ?
+    document.body.style.overflow = "unset"
+    : document.body.style.overflow = "hidden"
+  }, [menuVisible])
 
   return (
     <div>
@@ -110,7 +115,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
       <header>
         <div className="title">
           <a id="heading-title" href="/">
-            Tyler Harper
+            <img src="../images/TylerHarper.svg" alt="Tyler Harper Logo" className="logo-image" />
           </a>
         </div>
         <div
