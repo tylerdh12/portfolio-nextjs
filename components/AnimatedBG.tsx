@@ -15,7 +15,7 @@ const AnimatedBG = () => {
 
 
     const createSquare = (initialRandomVerticalLocation: string , randomVerticalLocation: string ,initialRandomHorizontalLocation: number, randomHorizontalLocation: number, duration: number, delay: number, rotation: number) => {
-        console.log(initialRandomHorizontalLocation, randomHorizontalLocation, duration, delay)
+        // console.log(initialRandomHorizontalLocation, randomHorizontalLocation, duration, delay)
         return <motion.div initial={{y: initialRandomVerticalLocation, x: initialRandomHorizontalLocation}}  animate={{y: randomVerticalLocation, x: randomHorizontalLocation, rotate: rotation}} transition={{duration: duration, delay: delay, yoyo: 10}} style={{height: 100, width: 100, borderColor: "grey", borderWidth: 3, borderStyle: "solid", opacity: .2}}/>
     }
 
