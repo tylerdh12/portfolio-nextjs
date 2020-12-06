@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "../Elements/ProjectCard";
 
-export const Portfolio = ({ data }: any) => {
+export const Portfolio = () => {
   const projects = [
     {
       id: 0,
