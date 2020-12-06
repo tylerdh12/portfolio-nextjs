@@ -32,4 +32,4 @@ const AnimatedBG = () => {
   );
 };
 
-export default Animation;
+export default AnimatedBG;
