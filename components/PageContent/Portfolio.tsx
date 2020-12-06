@@ -248,10 +248,10 @@ export const Portfolio = () => {
                 group: string;
                 project_name: string;
                 description: string;
-                technologies: [string];
+                technologies: any;
                 live_link: string;
                 github_link: string;
-                image_urls: [string];
+                image_urls: any;
                 status: string;
               }) => {
                 if (project.group === "Personal")
@@ -270,10 +270,10 @@ export const Portfolio = () => {
                 group: string;
                 project_name: string;
                 description: string;
-                technologies: [string];
+                technologies: any;
                 live_link: string;
                 github_link: string;
-                image_urls: [string];
+                image_urls: any;
                 status: string;
               }) => {
                 if (project.group === "School")
