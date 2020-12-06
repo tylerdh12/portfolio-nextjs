@@ -241,43 +241,19 @@ export const Portfolio = () => {
         <div id="portfolio" className="portfolio-container">
           <div className="portfolio-label">Personal Projects</div>
           <ul className="personal-projects">
-            {projects.map(
-              (project: {
-                id: number;
-                group: string;
-                project_name: string;
-                description: string;
-                technologies: [string];
-                live_link: string;
-                github_link: string;
-                image_urls: [string];
-                status: string;
-              }) => {
-                if (project.group === "Personal")
-                  return <ProjectCard key={project.id} project={project} />;
-              }
-            )}
+            {projects.map((project) => {
+              if (project.group === "Personal")
+                return <ProjectCard key={project.id} project={project} />;
+            })}
           </ul>
         </div>
         <div id="portfolio" className="portfolio-container">
           <div className="portfolio-label">School Projects</div>
           <ul className="personal-projects">
-            {projects.map(
-              (project: {
-                id: number;
-                group: string;
-                project_name: string;
-                description: string;
-                technologies: [string];
-                live_link: string;
-                github_link: string;
-                image_urls: [string];
-                status: string;
-              }) => {
-                if (project.group === "School")
-                  return <ProjectCard key={project.id} project={project} />;
-              }
-            )}
+            {projects.map((project) => {
+              if (project.group === "School")
+                return <ProjectCard key={project.id} project={project} />;
+            })}
           </ul>
         </div>
       </div>
