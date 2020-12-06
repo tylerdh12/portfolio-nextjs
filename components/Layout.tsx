@@ -1,7 +1,4 @@
-import {
-  faGithub,
-  faLinkedin
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
@@ -16,10 +13,10 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
   const [menuVisible, setMenuVisible] = useState(true);
 
   useEffect(() => {
-    menuVisible === true ?
-    document.body.style.overflow = "unset"
-    : document.body.style.overflow = "hidden"
-  }, [menuVisible])
+    menuVisible === true
+      ? (document.body.style.overflow = "unset")
+      : (document.body.style.overflow = "hidden");
+  }, [menuVisible]);
 
   return (
     <div>
@@ -115,7 +112,11 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
       <header>
         <div className="title">
           <a id="heading-title" href="/">
-            <img src="../images/TylerHarper.svg" alt="Tyler Harper Logo" className="logo-image" />
+            <img
+              src="../images/TylerHarper.svg"
+              alt="Tyler Harper Logo"
+              className="logo-image"
+            />
           </a>
         </div>
         <div
@@ -137,17 +138,17 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
               </Link>
             </li>
             <li>
-              <Link href="/portfolio">
+              <Link href="#portfolio">
                 <a className="menu-button">Portfolio</a>
               </Link>
             </li>
             <li>
-              <Link href="/about">
+              <Link href="#about">
                 <a className="menu-button">About</a>
               </Link>
             </li>
             <li>
-              <Link href="/contact">
+              <Link href="#contact">
                 <a className="menu-button">Contact</a>
               </Link>
             </li>
