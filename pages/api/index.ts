@@ -1,6 +1,6 @@
-import { NextAPIRequest, NextAPIResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default function (req: NextAPIRequest, res: NextAPIResponse) {
+export default function (req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {
     case "GET":
       return res.status(200).json({
