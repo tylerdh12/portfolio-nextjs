@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-import AnimatedBG from "../components/AnimatedBG";
 import Layout from "../components/Layout";
 
 const Home = () => {
