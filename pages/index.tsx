@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import React from "react";
-import AnimatedBG from "../components/AnimatedBG/AnimatedBG";
 import Layout from "../components/Layout";
 import Home from "../components/PageContent/Home";
 import About from "../components/PageContent/About";
