@@ -10,6 +10,22 @@ body.noScroll {
   overflow: hidden;
 }
 
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,9 +144,13 @@ nav ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .full-view div {
@@ -155,6 +175,8 @@ nav ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-left: 12rem;
 }
 
@@ -182,13 +204,6 @@ nav ul li a {
   font-weight: 300;
 }
 
-portfolio-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-}
-
 #portfolio-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,10 +213,16 @@ portfolio-section {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
-  width: 85%;
+  width: 100%;
 }
 
-.portfolio-container {
+#portfolio-section .section-label {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#portfolio-section .portfolio-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,18 +239,10 @@ portfolio-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.portfolio-label {
-  font-weight: 700;
-  font-size: 1.4rem;
-  border-bottom: 1px solid lightgrey;
   text-align: center;
-  padding: 2rem;
-  margin: 1rem;
 }
 
-.personal-projects {
+#portfolio-section .portfolio-container .personal-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,7 +262,7 @@ portfolio-section {
   padding: 0;
 }
 
-.school-projects {
+#portfolio-section .portfolio-container .school-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,6 +279,16 @@ portfolio-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.section-label {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  border-bottom: 2px solid grey;
+  padding: 2rem;
+  margin: 1rem;
+  width: 60%;
 }
 
 .item-container {
@@ -375,12 +398,6 @@ portfolio-section {
 
 .hub-button:hover a {
   color: lightgrey;
-}
-
-.about-me {
-  font-weight: 100;
-  line-height: 2rem;
-  text-align: justify;
 }
 
 .form-container {
@@ -635,5 +652,30 @@ textarea {
 
 .max-container {
   max-width: 900px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-me {
+  font-weight: 100;
+  line-height: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */

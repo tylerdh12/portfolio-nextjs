@@ -6,6 +6,7 @@ interface ProjectCardProps {
   key: number;
   project: {
     id: number;
+    path: string;
     group: string;
     project_name: string;
     description: string;
@@ -19,19 +20,27 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <motion.li key={project.id} className="card" whileHover={{
-      position: 'relative',
-      zIndex: 1,
-      scale: 1.05,
-      transition: {
-        duration: .2
-      }}}>
-    <Link href={{ pathname: "/portfolio/[id]", query: { id: project.id } }}>
-      <div className="item-container">
-        <img src={project.image_urls[0]} alt={project.project_name} />
-        <div className="item-label">{project.project_name}</div>
-      </div>
-    </Link>
+    <motion.li
+      key={project.id}
+      className="card"
+      whileHover={{
+        position: "relative",
+        zIndex: 1,
+        scale: 1.05,
+        transition: {
+          duration: 0.2,
+        },
+      }}
+    >
+      <Link href={{ pathname: "/portfolio/[id]", query: { id: project.id } }}>
+        <div className="item-container">
+          <img
+            src={project.image_urls[0]}
+            alt={project.project_name + " image"}
+          />
+          <div className="item-label">{project.project_name}</div>
+        </div>
+      </Link>
     </motion.li>
   );
 };

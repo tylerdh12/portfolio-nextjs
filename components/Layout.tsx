@@ -21,7 +21,9 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
   return (
     <div>
       <Head>
-        <title className="pageTitle">Tyler Harper - {title}</title>
+        <title className="pageTitle">
+          Tyler Harper - {title === "Home" ? "Developer" : title}
+        </title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" href="../images/icons/favicon.ico" />
@@ -98,16 +100,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff"></meta>
-        {/* Google Analytics */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161806444-1"></script>
-          <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-161806444-1'); </script>
-        `,
-          }}
-        />
       </Head>
       <header>
         <div className="title">
@@ -196,7 +188,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
           </ul>
         </nav>
       </header>
-      {children}
+      <div className="body">{children}</div>
       <Footer />
     </div>
   );

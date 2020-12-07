@@ -31,7 +31,7 @@ const Project = ({ project }: any) => {
         </ul>
         <div className="portfolio-img-container">
           {project.image_urls.map((item: any) => {
-            return <img src={item} className="portfolio-img" />;
+            return <img src={"../" + item} className="portfolio-img" />;
           })}
         </div>
       </div>
@@ -40,9 +40,7 @@ const Project = ({ project }: any) => {
 };
 
 export async function getStaticPaths() {
-  const response = await fetch(
-    "https://api.jsonbin.io/b/5f5942aead23b57ef90f1f76/2"
-  );
+  const response = await fetch("http://localhost:3000/api");
   const data = await response.json();
   const projects = data.projects;
   const paths = projects.map(
@@ -55,9 +53,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: any) {
-  const response = await fetch(
-    "https://api.jsonbin.io/b/5f5942aead23b57ef90f1f76/2"
-  );
+  const response = await fetch("http://localhost:3000/api");
   const data = await response.json();
   const projects = data.projects;
   const project = projects.find((item: { id: { toString: () => any } }) => {
