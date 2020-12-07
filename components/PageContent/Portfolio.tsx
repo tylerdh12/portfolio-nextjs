@@ -124,7 +124,7 @@ export const Portfolio = () => {
       id: 7,
       path: "/harvest_guardian_app",
       group: "Personal",
-      project_name: "Harvest Guardian",
+      project_name: "Harvest Guardian App",
       description: "Gardening app to help keep track of your plants",
       technologies: [
         "Expo",
@@ -244,7 +244,16 @@ export const Portfolio = () => {
       technologies: ["HTML", "CSS", "JavaScript", "React", "React Bootstrap"],
       live_link: "https://harvestguardian.com/",
       github_link: "https://github.com/tylerdh12/Master-Harvest-Guardian",
-      image_urls: [],
+      image_urls: [
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_3.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_1.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_2.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_4.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_5.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_6.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_7.jpg",
+        "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_8.jpg",
+      ],
       status: "Complete",
     },
   ];
