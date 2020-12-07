@@ -134,22 +134,50 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
           <ul id="nav-list">
             <li>
               <Link href="/">
-                <a className="menu-button">Home</a>
+                <a
+                  onClick={() => {
+                    setMenuVisible(true);
+                  }}
+                  className="menu-button"
+                >
+                  Home
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#portfolio">
-                <a className="menu-button">Portfolio</a>
+                <a
+                  onClick={() => {
+                    setMenuVisible(true);
+                  }}
+                  className="menu-button"
+                >
+                  Portfolio
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#about">
-                <a className="menu-button">About</a>
+                <a
+                  onClick={() => {
+                    setMenuVisible(true);
+                  }}
+                  className="menu-button"
+                >
+                  About
+                </a>
               </Link>
             </li>
             <li>
               <Link href="#contact">
-                <a className="menu-button">Contact</a>
+                <a
+                  onClick={() => {
+                    setMenuVisible(true);
+                  }}
+                  className="menu-button"
+                >
+                  Contact
+                </a>
               </Link>
             </li>
             <li>
