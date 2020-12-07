@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProjectCard from "../Elements/ProjectCard";
 import Axios from "axios";
 
-export const Portfolio = ({ data }: any) => {
+export const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
