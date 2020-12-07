@@ -5,6 +5,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body.noScroll {
+  /* ...or body.dialogShowing */
+  overflow: hidden;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,19 +23,19 @@ header {
           justify-content: space-between;
 }
 
-.title {
+header .title {
   padding: 1rem;
   white-space: no-wrap;
+}
+
+header .title .toggle-menu {
+  margin: 1rem;
 }
 
 header .title a {
   text-decoration: none;
   font-size: 1.4rem;
   color: lightgrey;
-}
-
-.toggle-menu {
-  margin: 1rem;
 }
 
 .menu-icon {
@@ -40,14 +45,26 @@ header .title a {
   margin: 6px 0;
 }
 
+nav {
+  position: inherit;
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  overflow: unset;
+}
+
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 90%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -119,6 +136,11 @@ nav ul li a {
 .full-view div {
   margin: auto;
   width: 85%;
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
 }
 
 .home-page {
@@ -396,6 +418,27 @@ form p label {
   width: 100%;
 }
 
+form p button {
+  padding: 0.75rem;
+  margin: 0.4rem;
+  background-color: lightgrey;
+  border: 2px solid transparent;
+  border-radius: 10%;
+  color: #272727;
+  font-weight: 600;
+  font-size: 1rem;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+form p button:hover {
+  color: lightgrey;
+  border-color: lightgrey;
+  background-color: transparent;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
 input {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -416,27 +459,6 @@ textarea {
   height: 3rem;
   border-radius: 0.5rem;
   border: none;
-}
-
-form p button {
-  padding: 0.75rem;
-  margin: 0.4rem;
-  background-color: lightgrey;
-  border: 2px solid transparent;
-  border-radius: 10%;
-  color: #272727;
-  font-weight: 600;
-  font-size: 1rem;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-}
-
-form p button:hover {
-  color: lightgrey;
-  border-color: lightgrey;
-  background-color: transparent;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
 }
 
 .copyright {
@@ -475,10 +497,12 @@ form p button:hover {
     z-index: 2;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     margin-bottom: -100%;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 60px;
     display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -486,6 +510,8 @@ form p button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: absolute;
+    overflow: unset;
     background-color: rgba(39, 39, 39, 0.95);
   }
   nav ul {
