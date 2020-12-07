@@ -148,7 +148,7 @@ export const Portfolio = () => {
         "./images/projects/personal_project/Harvest-Guardian-7.png",
         "./images/projects/personal_project/Harvest-Guardian-8.png",
       ],
-      status: "inComplete",
+      status: "Complete",
     },
     {
       id: 8,
@@ -220,9 +220,9 @@ export const Portfolio = () => {
       status: "Complete",
     },
     {
-      id: 20,
+      id: 12,
       path: "/redux_scoreboard",
-      group: "Misc",
+      group: "School",
       project_name: "Scoreboard",
       description: "This is a project that uses React with Redux for state.",
       technologies: ["HTML", "CSS", "JavaScript", "React", "Redux"],
@@ -233,6 +233,19 @@ export const Portfolio = () => {
         "./images/projects/treehouse_projects/fsjs_techdegree/course_projects/scoreboard/ScoreBoard-with-Redux-2.png",
       ],
       status: "inComplete",
+    },
+    {
+      id: 12,
+      path: "/harvest_guardian_website",
+      group: "Personal",
+      project_name: "Harvest Guardian Website",
+      description:
+        "This is a project that uses React with React Bootstrap as a style template",
+      technologies: ["HTML", "CSS", "JavaScript", "React", "React Bootstrap"],
+      live_link: "https://harvestguardian.com/",
+      github_link: "https://github.com/tylerdh12/Master-Harvest-Guardian",
+      image_urls: [],
+      status: "Complete",
     },
   ];
   return (
@@ -254,7 +267,10 @@ export const Portfolio = () => {
                 image_urls: any;
                 status: string;
               }) => {
-                if (project.group === "Personal")
+                if (
+                  project.group === "Personal" &&
+                  project.status === "Complete"
+                )
                   return <ProjectCard key={project.id} project={project} />;
               }
             )}
@@ -276,7 +292,7 @@ export const Portfolio = () => {
                 image_urls: any;
                 status: string;
               }) => {
-                if (project.group === "School")
+                if (project.group === "School" && project.status === "Complete")
                   return <ProjectCard key={project.id} project={project} />;
               }
             )}
