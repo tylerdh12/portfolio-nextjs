@@ -101,7 +101,7 @@ export const Portfolio = () => {
         "./images/projects/personal_project/Password-Generator.png",
         "./images/projects/personal_project/Password-Generator-2.png",
       ],
-      status: "Complete",
+      status: "inComplete",
     },
     {
       id: 6,
@@ -118,7 +118,7 @@ export const Portfolio = () => {
         "./images/projects/personal_project/ColorPalette-2.png",
         "./images/projects/personal_project/ColorPalette-3.png",
       ],
-      status: "Complete",
+      status: "inComplete",
     },
     {
       id: 7,
@@ -148,7 +148,7 @@ export const Portfolio = () => {
         "./images/projects/personal_project/Harvest-Guardian-7.png",
         "./images/projects/personal_project/Harvest-Guardian-8.png",
       ],
-      status: "Complete",
+      status: "inComplete",
     },
     {
       id: 8,
