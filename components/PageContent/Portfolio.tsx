@@ -1,75 +1,67 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProjectCard from "../Elements/ProjectCard";
-import Axios from "axios";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
 
-export const Portfolio = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await Axios.get("http://localhost:3000/api");
-
-      if (response.status === 200 && response) {
-        setLoading(false);
-        setProjects(response.data.projects);
-      }
-    };
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
+const Portfolio = (props, { slugs }) => {
+  console.log(props);
+  // return (
+  //   <div id="portfolio-section">
+  //     <div className="section-label">Personal Projects</div>
+  //     <div id="portfolio" className="portfolio-container">
+  //       <div>
+  //       <ul className="personal-projects">
+  //         {slugs.map((slug) => {
+  //           if (data.group === "Personal" && data.status === "Complete")
+  //             return <ProjectCard key={slug} project={{ data, slug }} />;
+  //         })}
+  //       </ul>
+  //     </div>
+  //     <div className="section-label">School Projects</div>
+  //     <div id="portfolio" className="portfolio-container">
+  //       <ul className="personal-projects">
+  //         {slugs.map((slug) => {
+  //           if (data.group === "School" && data.status === "Complete")
+  //             return <ProjectCard key={slug} project={{ data, slug }} />;
+  //         })}
+  //       </ul>
+  //     </div>
+  //   </div>
+  // );
   return (
-    <div id="portfolio-section">
-      <div className="section-label">Personal Projects</div>
-      <div id="portfolio" className="portfolio-container">
-        <ul className="personal-projects">
-          {projects.map(
-            (project: {
-              id: number;
-              path: string;
-              group: string;
-              project_name: string;
-              description: string;
-              technologies: any;
-              live_link: string;
-              github_link: string;
-              image_urls: any;
-              status: string;
-            }) => {
-              if (project.group === "Personal" && project.status === "Complete")
-                return <ProjectCard key={project.id} project={project} />;
-            }
-          )}
-        </ul>
-      </div>
-      <div className="section-label">School Projects</div>
-      <div id="portfolio" className="portfolio-container">
-        <ul className="personal-projects">
-          {projects.map(
-            (project: {
-              id: number;
-              path: string;
-              group: string;
-              project_name: string;
-              description: string;
-              technologies: any;
-              live_link: string;
-              github_link: string;
-              image_urls: any;
-              status: string;
-            }) => {
-              if (project.group === "School" && project.status === "Complete")
-                return <ProjectCard key={project.id} project={project} />;
-            }
-          )}
-        </ul>
-      </div>
+    <div>
+      {
+        <div>
+          {slugs.map((slug) => {
+            let parsedString = slug.replaceAll("-", " ").split(" ");
+            let project_title = parsedString
+              .map((word) => {
+                return word[0].toUpperCase() + word.substring(1);
+              })
+              .join(" ");
+
+            return (
+              <div key={slug}>
+                <Link href={"/portfolio/" + slug}>
+                  <a>{slug}</a>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      }
     </div>
   );
 };
 
+export const getStaticProps = async () => {
+  const files = fs.readdirSync("projects");
+
+  return {
+    props: {
+      slugs: files.map((filename) => filename.replace(".md", "")),
+    },
+  };
+};
 export default Portfolio;

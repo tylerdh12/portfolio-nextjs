@@ -5,9 +5,10 @@ interface ContactProps {}
 const Contact: React.FC<ContactProps> = ({}) => {
   return (
     <div id="contact" className="full-view">
+      <div className="section-label">Contact Me</div>
+
       <div className="max-container">
         <div className="form-container">
-          <h2>Contact</h2>
           <form name="contact" method="POST" data-netlify="true">
             <p>
               <label>

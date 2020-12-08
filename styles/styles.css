@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.html {
+  min-height: 100vh;
+}
+
 body.noScroll {
   /* ...or body.dialogShowing */
   overflow: hidden;
@@ -24,6 +28,7 @@ body.noScroll {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 84vh;
 }
 
 header {

@@ -19,7 +19,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
   }, [menuVisible]);
 
   return (
-    <div>
+    <div className="html">
       <Head>
         <title className="pageTitle">
           Tyler Harper - {title === "Home" ? "Developer" : title}

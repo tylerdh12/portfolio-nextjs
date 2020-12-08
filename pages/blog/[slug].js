@@ -1,37 +1,26 @@
+import React from "react";
+
+import Layout from "../../components/Layout";
+
 import fs from "fs";
-import matter from "gray-matter";
-import marked from "marked";
-import Head from "next/head";
 import path from "path";
+import matter from "gray-matter";
+import Head from "next/head";
+import marked from "marked";
 
-interface PostProps {
-  htmlString: string;
-  data: {
-    title: string;
-    description: string;
-  };
-}
-
-const Post: React.FC<PostProps> = ({ htmlString, data }) => {
+const Post = ({ htmlString, data }) => {
   return (
     <>
       <Head>
         <title>{data.title}</title>
-        <meta
-          property="description"
-          content={data.description}
-          key="description"
-        />
+        <meta title="description" content={data.description} />
       </Head>
-      <div>
-        <div>Contents Below</div>
+      <Layout title="Home">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
-      </div>
+      </Layout>
     </>
   );
 };
-
-// Creates Paths for the items in the /posts/ route
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync("posts");
@@ -47,16 +36,15 @@ export const getStaticPaths = async () => {
   };
 };
 
-// Fetches data
-
-export const getStaticProps = async ({ params: { slug } }: any) => {
-  //reads file
+export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMetadata = fs
     .readFileSync(path.join("posts", slug + ".md"))
     .toString();
+
   const parsedMarkdown = matter(markdownWithMetadata);
 
   const htmlString = marked(parsedMarkdown.content);
+
   return {
     props: {
       htmlString,
