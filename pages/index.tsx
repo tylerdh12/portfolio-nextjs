@@ -4,9 +4,11 @@ import Home from "../components/PageContent/Home";
 import About from "../components/PageContent/About";
 import Contact from "../components/PageContent/Contact";
 import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import { ProjectCard } from "../components/Elements/ProjectCard";
 
-const Index = ({ slugs }: any) => {
+const Index = ({ projects }: any) => {
   return (
     <Layout title="Home">
       <Home />
@@ -15,8 +17,8 @@ const Index = ({ slugs }: any) => {
         <div id="portfolio" className="portfolio-container">
           <div>
             <ul className="personal-projects">
-              {slugs.map((slug: string) => {
-                return <ProjectCard key={slug} slug={slug} />;
+              {projects.map((project: any) => {
+                return <ProjectCard key={project.title} project={project} />;
               })}
             </ul>
           </div>
@@ -33,9 +35,17 @@ export const getStaticProps = async () => {
 
   const slugs = files.map((filename) => filename.replace(".md", ""));
 
+  const projects = slugs.map((slug) => {
+    const markdownWithMetadata = fs
+      .readFileSync(path.join("projects", slug + ".md"))
+      .toString();
+
+    return matter(markdownWithMetadata).data;
+  });
+
   return {
     props: {
-      slugs,
+      projects,
     },
   };
 };

@@ -20,6 +20,50 @@ body.noScroll {
   align-items: center;
   justify-content: center;
   min-height: 84vh;
+
+  // div {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+
+  //   h2 {
+  //   }
+
+  //   h3 {
+  //   }
+
+  //   h4 {
+  //   }
+
+  //   ul {
+  //     margin: 0;
+  //     padding: 0;
+  //     li {
+  //       padding: 0.5em;
+  //       margin: 0;
+  //       text-align: center;
+  //       list-style: none;
+  //     }
+  //   }
+
+  //   p {
+  //     &:hover {
+  //       border-color: transparent;
+  //       background-color: lightgrey;
+  //       transition-duration: 0.4s;
+  //       a {
+  //         color: #272727;
+  //         text-decoration: none;
+  //       }
+  //     }
+  //   }
+
+  //   p {
+  //     img {
+  //       max-width: 80vw;
+  //     }
+  //   }
+  // }
 }
 
 header {
@@ -382,6 +426,14 @@ textarea {
 
 .notVisible {
   display: none;
+}
+
+.project-page {
+  p {
+    img {
+      max-width: 80%;
+    }
+  }
 }
 
 @media (max-width: 650px) {

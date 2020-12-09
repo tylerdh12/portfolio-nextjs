@@ -13,7 +13,7 @@ status: "Complete"
 
 ### Unit 2 Project
 
-This app displays random quotes each time a button is clicked or a certain timeout has passed.
+This app takes a list of students and demonstrates a pagination list.
 
 [View Project](https://pagination.jsstack.dev/)
 

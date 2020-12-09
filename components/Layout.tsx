@@ -137,7 +137,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
               </Link>
             </li>
             <li>
-              <Link href="#portfolio">
+              <Link href="/#portfolio">
                 <a
                   onClick={() => {
                     setMenuVisible(true);
@@ -149,7 +149,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
               </Link>
             </li>
             <li>
-              <Link href="#about">
+              <Link href="/#about">
                 <a
                   onClick={() => {
                     setMenuVisible(true);
@@ -161,7 +161,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children, title }) => {
               </Link>
             </li>
             <li>
-              <Link href="#contact">
+              <Link href="/#contact">
                 <a
                   onClick={() => {
                     setMenuVisible(true);

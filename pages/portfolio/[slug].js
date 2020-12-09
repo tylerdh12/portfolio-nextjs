@@ -16,7 +16,7 @@ const Post = ({ htmlString, data }) => {
         <title>{data.title}</title>
         <meta title="description" content={data.description} />
       </Head>
-      {/* <Layout title="Home">
+      {/* <Layout title={data.title} className="project-page">
         <div dangerouslySetInnerHTML={{ __html: htmlString }} />
       </Layout> */}
 

@@ -13,7 +13,7 @@ status: "Complete"
 
 ### Unit 3 Project
 
-This app displays random quotes each time a button is clicked or a certain timeout has passed.
+This app has regex form validation and conditional behaviors. The form actually works.
 
 [View Project](https://interactiveform.jsstack.dev/)
 

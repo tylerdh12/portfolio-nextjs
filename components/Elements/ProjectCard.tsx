@@ -4,14 +4,13 @@ import React from "react";
 
 interface ProjectCardProps {
   key: string;
-  slug: string;
+  project: any;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ slug }) => {
-  console.log(slug);
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <motion.li
-      key={slug}
+      key={project.title}
       className="card"
       whileHover={{
         position: "relative",
@@ -22,10 +21,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ slug }) => {
         },
       }}
     >
-      <Link href={"/portfolio/" + slug}>
+      <Link
+        href={"/portfolio/" + project.title.toLowerCase().split(" ").join("-")}
+      >
         <div className="item-container">
-          {/* <img src={sata.coverImage} alt={data.project_name + " image"} /> */}
-          <div className="item-label">{slug}</div>
+          <img src={project.coverImage} alt={project.title + " image"} />
+          <div className="item-label">{project.title}</div>
         </div>
       </Link>
     </motion.li>
