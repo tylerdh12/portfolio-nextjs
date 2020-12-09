@@ -25,9 +25,6 @@ const Home = () => {
       id="home-content"
       className="home-page"
     >
-      <motion.h4 variants={item} className="home-string">
-        Hello, my name is
-      </motion.h4>
       <motion.h1 variants={item} id="owner-name" className="home-name">
         Tyler Harper
       </motion.h1>
@@ -35,7 +32,7 @@ const Home = () => {
         Full Stack Web / Native Developer
       </motion.h2>
       <motion.p variants={item} id="owner-tagline" className="home-tagline">
-        I love building things for the web
+        Building Beautiful Functional Apps for the Web and Mobile
       </motion.p>
     </motion.div>
   );
