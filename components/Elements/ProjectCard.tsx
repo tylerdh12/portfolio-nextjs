@@ -3,25 +3,15 @@ import Link from "next/link";
 import React from "react";
 
 interface ProjectCardProps {
-  key: number;
-  project: {
-    id: number;
-    path: string;
-    group: string;
-    project_name: string;
-    description: string;
-    technologies: [string];
-    live_link: string;
-    github_link: string;
-    image_urls: [string];
-    status: string;
-  };
+  key: string;
+  slug: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ slug }) => {
+  console.log(slug);
   return (
     <motion.li
-      key={project.id}
+      key={slug}
       className="card"
       whileHover={{
         position: "relative",
@@ -32,13 +22,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         },
       }}
     >
-      <Link href={{ pathname: "/portfolio/[id]", query: { id: project.id } }}>
+      <Link href={"/portfolio/" + slug}>
         <div className="item-container">
-          <img
-            src={project.image_urls[0]}
-            alt={project.project_name + " image"}
-          />
-          <div className="item-label">{project.project_name}</div>
+          {/* <img src={sata.coverImage} alt={data.project_name + " image"} /> */}
+          <div className="item-label">{slug}</div>
         </div>
       </Link>
     </motion.li>

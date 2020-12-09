@@ -1,11 +1,10 @@
 import React from "react";
-import ProjectCard from "../Elements/ProjectCard";
-import path from "path";
-import matter from "gray-matter";
-import Link from "next/link";
+// import ProjectCard from "../Elements/ProjectCard";
+// import path from "path";
+// import matter from "gray-matter";
+// import Link from "next/link";
 
-const Portfolio = (props, { slugs }) => {
-  console.log(props);
+const Portfolio = () => {
   // return (
   //   <div id="portfolio-section">
   //     <div className="section-label">Personal Projects</div>
@@ -31,7 +30,7 @@ const Portfolio = (props, { slugs }) => {
   // );
   return (
     <div>
-      {
+      {/* {
         <div>
           {slugs.map((slug) => {
             let parsedString = slug.replaceAll("-", " ").split(" ");
@@ -50,18 +49,9 @@ const Portfolio = (props, { slugs }) => {
             );
           })}
         </div>
-      }
+      } */}
     </div>
   );
 };
 
-export const getStaticProps = async () => {
-  const files = fs.readdirSync("projects");
-
-  return {
-    props: {
-      slugs: files.map((filename) => filename.replace(".md", "")),
-    },
-  };
-};
 export default Portfolio;
