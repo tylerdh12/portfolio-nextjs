@@ -350,6 +350,7 @@ form {
 
   p {
     display: flex;
+    flex-direction: column;
     padding: 0.5rem;
     width: 100%;
     justify-content: center;
@@ -434,6 +435,11 @@ textarea {
       max-width: 80%;
     }
   }
+}
+
+.back-to-home-button {
+  color: grey;
+  text-decoration: none;
 }
 
 @media (max-width: 650px) {
