@@ -7,6 +7,9 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* Global AdSense */}
+          <script data-ad-client="ca-pub-7951808001960902" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
