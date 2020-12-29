@@ -559,8 +559,25 @@ textarea {
 	margin: 0;
 }
 
+span.tag {
+	font-size: 12px;
+	margin: 5px;
+	padding: 8px;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+
 @media (min-width: 650px) {
 	ul#nav-list {
 		flex-direction: row;
+	}
+
+	.tag-section {
+		margin: 20px 20px 10px 20px;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }

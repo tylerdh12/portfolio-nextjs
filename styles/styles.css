@@ -1,5 +1,5 @@
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #272727;
   color: lightgrey;
   scroll-behavior: smooth;
@@ -694,5 +694,27 @@ textarea {
   text-align: center;
   width: 100%;
   margin: 0;
+}
+
+.tag-section {
+  margin: 20px 20px 10px 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+span.tag {
+  font-size: 12px;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */
