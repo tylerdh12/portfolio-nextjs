@@ -8,7 +8,6 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-	console.log(project);
 	return (
 		<motion.li
 			key={project.title}
