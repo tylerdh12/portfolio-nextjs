@@ -236,7 +236,9 @@ header {
 	background-color: $card-color;
 
 	img {
-		max-width: 100%;
+		width: 100%;
+		max-width: 300px;
+		max-height: 300px;
 		border-radius: 10px;
 	}
 }

@@ -1,21 +1,22 @@
 ---
 title: Harvest Guardian App
-description: "Gardening app to help keep track of your plants."
-coverImage: "./images/projects/personal_project/Harvest-Guardian-1.png"
-group: "Personal"
+description: 'Gardening app to help keep track of your plants.'
+coverImage: './images/projects/personal_project/Harvest-Guardian-1.png'
+group: 'Personal'
 technologies:
   [
-    "Expo",
-    "Custom REST Api",
-    "React Native",
-    "StyledComponents",
-    "TypeScript",
-    "MongoDB",
-    "Mongoose",
+    'Expo',
+    'Custom REST Api',
+    'React Native',
+    'StyledComponents',
+    'TypeScript',
+    'MongoDB',
+    'Mongoose'
   ]
-live_link: "https://expo.io/@tylerdh12/Harvest_Guardian"
-github_link: "https://github.com/tylerdh12/Harvest-Guardian"
-status: "Incomplete"
+live_link: 'https://expo.io/@tylerdh12/Harvest_Guardian'
+github_link: 'https://github.com/tylerdh12/Harvest-Guardian'
+status: 'Incomplete'
+visibility: 'visible'
 ---
 
 ## Harvest Guardian App

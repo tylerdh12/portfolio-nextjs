@@ -7,6 +7,7 @@ technologies: ["HTML", "CSS", "JavaScript"]
 live_link: "https://gameshow.jsstack.dev/"
 github_link: "https://github.com/tylerdh12/TeamTreehouse-OOP_Game_Show_App-Unit_4_Project"
 status: "Complete"
+visibility: "hidden"
 ---
 
 ## Phrase Hunter Game Show

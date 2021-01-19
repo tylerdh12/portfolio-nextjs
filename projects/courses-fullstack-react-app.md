@@ -1,19 +1,29 @@
 ---
 title: Courses FullStack React App
-description: "This is a project that uses React for the Frontend and Express for the backend. This project is the Visual Layer (frontend) of the previous REST API created in my Unit 9 Project. This application is a Fullstack web application demonstrating React Routing, Client Login, and the CRUD operations that need to be available in a FullStack application."
-coverImage: "./images/projects/treehouse_projects/fsjs_techdegree/unit_projects/project_10/Courses-Project.png"
-group: "School"
-technologies: ["JSX", "CSS", "JavaScript", "React", "JS-Cookies"]
-live_link: "https://courses.jsstack.dev/"
-github_link: "https://github.com/tylerdh12/Course_App"
-status: "Complete"
+description:
+  'This is a project that uses React for the Frontend and Express for the
+  backend. This project is the Visual Layer (frontend) of the previous REST API
+  created in my Unit 9 Project. This application is a Fullstack web application
+  demonstrating React Routing, Client Login, and the CRUD operations that need
+  to be available in a FullStack application.'
+coverImage: './images/projects/treehouse_projects/fsjs_techdegree/unit_projects/project_10/Courses-Project.png'
+group: 'School'
+technologies: ['JSX', 'CSS', 'JavaScript', 'React', 'JS-Cookies']
+live_link: 'https://courses.jsstack.dev/'
+github_link: 'https://github.com/tylerdh12/Course_App'
+status: 'Complete'
+visibility: 'visible'
 ---
 
 ## Courses FullStack React App
 
 ### Unit 10 Project
 
-This is a project that uses React for the Frontend and Express for the backend. This project is the Visual Layer (frontend) of the previous REST API created in my Unit 9 Project. This application is a Fullstack web application demonstrating React Routing, Client Login, and the CRUD operations that need to be available in a FullStack application.
+This is a project that uses React for the Frontend and Express for the backend.
+This project is the Visual Layer (frontend) of the previous REST API created in
+my Unit 9 Project. This application is a Fullstack web application demonstrating
+React Routing, Client Login, and the CRUD operations that need to be available
+in a FullStack application.
 
 [View Project](https://courses.jsstack.dev/)
 

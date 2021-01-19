@@ -27,11 +27,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 				<div className='item-container'>
 					<img src={project.coverImage} alt={project.title + ' image'} />
 					<div className='item-label'>{project.title}</div>
-					<div className='tag-section'>
+					{/* <div className='tag-section'>
 						{project.technologies.map((tech: React.ReactNode) => (
 							<span className='tag'>{tech}</span>
 						))}
-					</div>
+					</div> */}
 				</div>
 			</Link>
 		</motion.li>

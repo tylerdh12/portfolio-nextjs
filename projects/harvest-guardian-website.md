@@ -1,12 +1,14 @@
 ---
 title: Harvest Guardian Website
-description: "This is a project that uses React with React Bootstrap as a style template"
-coverImage: "./images/projects/personal_project/Harvest_Guardian_Website/HGWeb_3.jpg"
-group: "Personal"
-technologies: ["TypeScript", "React", "React Bootstrap"]
-live_link: "https://harvestguardian.com/"
-github_link: "https://github.com/tylerdh12/Master-Harvest-Guardian"
-status: "Incomplete"
+description:
+  'This is a project that uses React with React Bootstrap as a style template'
+coverImage: './images/projects/personal_project/Harvest_Guardian_Website/HGWeb_3.jpg'
+group: 'Personal'
+technologies: ['TypeScript', 'React', 'React Bootstrap']
+live_link: 'https://harvestguardian.com/'
+github_link: 'https://github.com/tylerdh12/Master-Harvest-Guardian'
+status: 'Incomplete'
+visibility: 'visible'
 ---
 
 ## Harvest Guardian Website

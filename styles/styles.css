@@ -1,17 +1,8 @@
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #272727;
   color: lightgrey;
   scroll-behavior: smooth;
-}
-
-.html {
-  min-height: 100vh;
-}
-
-body.noScroll {
-  /* ...or body.dialogShowing */
-  overflow: hidden;
 }
 
 .body {
@@ -44,29 +35,34 @@ header {
           justify-content: space-between;
 }
 
-header .title {
+header div.title {
   padding: 1rem;
   white-space: no-wrap;
 }
 
-header .title .toggle-menu {
-  margin: 1rem;
-}
-
-header .title a {
+header div.title a#heading-title {
   text-decoration: none;
   font-size: 1.4rem;
   color: lightgrey;
 }
 
-.menu-icon {
+header div.title a#heading-title img.logo-image {
+  width: 40px;
+  height: 40px;
+}
+
+header div.toggle-menu {
+  margin: 1rem;
+}
+
+header div.toggle-menu div.menu-icon {
   width: 28px;
   height: 3px;
   background-color: lightgrey;
   margin: 6px 0;
 }
 
-nav {
+header nav#nav-menu {
   position: inherit;
   width: auto;
   height: auto;
@@ -74,15 +70,11 @@ nav {
   overflow: unset;
 }
 
-nav ul {
+header nav#nav-menu ul#nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 90%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -91,7 +83,7 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+header nav#nav-menu ul#nav-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,14 +98,15 @@ nav ul li {
   text-align: center;
 }
 
-nav ul li a {
+header nav#nav-menu ul#nav-list li a.menu-button {
+  width: 100%;
   padding: 0.5rem;
   font-size: 1.1rem;
   text-decoration: none;
-  color: gray;
+  color: lightgrey;
 }
 
-.social-icons {
+header nav#nav-menu ul#nav-list li div.social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,21 +116,17 @@ nav ul li a {
           flex-direction: row;
 }
 
-.fa-twitter {
-  color: #1da1f2;
-}
-
-.fa-linkedin {
-  color: #2867b2;
-}
-
-.social-icons .fa {
+header nav#nav-menu ul#nav-list li div.social-icons .fa {
   font-size: 1.2rem;
   padding: 0.5rem;
 }
 
-.menu-button {
-  width: 100%;
+header nav#nav-menu ul#nav-list li div.social-icons .faGithub {
+  color: white;
+}
+
+header nav#nav-menu ul#nav-list li div.social-icons .faLinkedin {
+  color: #2867b2;
 }
 
 .full-view {
@@ -161,11 +150,6 @@ nav ul li a {
 .full-view div {
   margin: auto;
   width: 85%;
-}
-
-.logo-image {
-  width: 40px;
-  height: 40px;
 }
 
 .home-page {
@@ -322,7 +306,9 @@ nav ul li a {
 }
 
 .item-container img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 10px;
 }
 
@@ -515,7 +501,7 @@ textarea {
 }
 
 .back-to-home-button {
-  color: grey;
+  color: lightgrey;
   text-decoration: none;
 }
 
@@ -608,8 +594,8 @@ textarea {
 .link-button {
   border-radius: 5px;
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: lightgrey;
+  border: 1px solid lightgrey;
   padding: 0.75rem;
   font-weight: 700;
   font-size: 1.1rem;
@@ -618,7 +604,7 @@ textarea {
 }
 
 .link-button:hover {
-  background-color: white;
+  background-color: lightgrey;
   color: #272727;
 }
 
@@ -661,12 +647,6 @@ textarea {
   list-style: none;
 }
 
-.square {
-  width: 200px;
-  height: 200px;
-  border: 3px solid #ffffff;
-}
-
 .max-container {
   max-width: 900px;
 }
@@ -696,19 +676,6 @@ textarea {
   margin: 0;
 }
 
-.tag-section {
-  margin: 20px 20px 10px 20px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 span.tag {
   font-size: 12px;
   margin: 5px;
@@ -716,5 +683,26 @@ span.tag {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.6);
   text-align: center;
+}
+
+@media (min-width: 650px) {
+  ul#nav-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .tag-section {
+    margin: 20px 20px 10px 20px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

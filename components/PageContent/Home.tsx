@@ -32,7 +32,7 @@ const Home = () => {
 				Full Stack Web / Native Developer
 			</motion.h2>
 			<motion.p variants={item} id='owner-tagline' className='home-tagline'>
-				Building Beautiful Functional Apps for the Web and Mobile
+				Building beautiful functional apps for the web and mobile
 			</motion.p>
 		</motion.div>
 	);

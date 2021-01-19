@@ -1,12 +1,14 @@
 ---
 title: React App using Flickr API
-description: "This is a project that uses the Flickr API and React as the framework"
-coverImage: "./images/projects/treehouse_projects/fsjs_techdegree/unit_projects/project_7/Flickr_api.png"
-group: "School"
-technologies: ["JSX", "CSS", "JavaScript", "React"]
-live_link: "https://flickr.jsstack.dev/"
-github_link: "https://github.com/tylerdh12/Project-7-TeamTreehouse-FSJ"
-status: "Complete"
+description:
+  'This is a project that uses the Flickr API and React as the framework'
+coverImage: './images/projects/treehouse_projects/fsjs_techdegree/unit_projects/project_7/Flickr_api.png'
+group: 'School'
+technologies: ['JSX', 'CSS', 'JavaScript', 'React']
+live_link: 'https://flickr.jsstack.dev/'
+github_link: 'https://github.com/tylerdh12/Project-7-TeamTreehouse-FSJ'
+status: 'Complete'
+visibility: 'hidden'
 ---
 
 ## React App using Flickr API

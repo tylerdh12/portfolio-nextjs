@@ -1,19 +1,23 @@
 ---
 title: Interactive Form
-description: "This app has regex form validation and conditional behaviors. The form actually works."
-coverImage: "./images/projects/treehouse_projects/fsjs_techdegree/unit_projects/project_3/Interactive-Form-Project.png"
-group: "School"
-technologies: ["HTML", "CSS", "JavaScript"]
-live_link: "https://interactiveform.jsstack.dev/"
-github_link: "https://github.com/tylerdh12/TeamTreehouse-Interactive_Form-Unit_3_Project"
-status: "Complete"
+description:
+  'This app has regex form validation and conditional behaviors. The form
+  actually works.'
+coverImage: './images/projects/treehouse_projects/fsjs_techdegree/unit_projects/project_3/Interactive-Form-Project.png'
+group: 'School'
+technologies: ['HTML', 'CSS', 'JavaScript']
+live_link: 'https://interactiveform.jsstack.dev/'
+github_link: 'https://github.com/tylerdh12/TeamTreehouse-Interactive_Form-Unit_3_Project'
+status: 'Complete'
+visibility: 'hidden'
 ---
 
 ## Interactive Form
 
 ### Unit 3 Project
 
-This app has regex form validation and conditional behaviors. The form actually works.
+This app has regex form validation and conditional behaviors. The form actually
+works.
 
 [View Project](https://interactiveform.jsstack.dev/)
 
