@@ -13,7 +13,7 @@ technologies:
     'MongoDB',
     'Mongoose'
   ]
-live_link: 'https://expo.io/@tylerdh12/Harvest_Guardian'
+live_link: 'https://app.harvestguardian.com'
 github_link: 'https://github.com/tylerdh12/Harvest-Guardian'
 status: 'Incomplete'
 visibility: 'visible'
