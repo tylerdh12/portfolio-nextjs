@@ -8,7 +8,7 @@ technologies: ['JSX', 'CSS', 'JavaScript', 'React']
 live_link: 'https://flickr.jsstack.dev/'
 github_link: 'https://github.com/tylerdh12/Project-7-TeamTreehouse-FSJ'
 status: 'Complete'
-visibility: 'hidden'
+visibility: 'visible'
 ---
 
 ## React App using Flickr API
