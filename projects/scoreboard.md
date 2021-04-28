@@ -7,7 +7,7 @@ technologies: ['JSX', 'CSS', 'JavaScript', 'React', 'Redux']
 live_link: 'https://scoreboard.jsstack.dev/'
 github_link: 'https://github.com/tylerdh12/FSJS-Scoreboard'
 status: 'Complete'
-visibility: 'hidden'
+visibility: 'visible'
 ---
 
 ## Scoreboard
