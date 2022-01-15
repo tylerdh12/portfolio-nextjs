@@ -19,7 +19,7 @@
     "axios": "^0.21.0",
     "framer-motion": "^2.9.1",
     "gray-matter": "^4.0.2",
-    "marked": "^1.2.5",
+    "marked": "^4.0.10",
     "next": "^9.5.4-canary.14",
     "next-connect": "^0.9.1",
     "react": "16.13.1",
